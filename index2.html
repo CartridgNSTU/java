@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<title>Подробная информация</title>
+		<script type="text/javascript" src="srp.js"></script>
+		<link rel="stylesheet" href="styles.css">
+</head>
+<body onload="load_from_site();load_student(0)">
+<div class="obv">
+	<h1 id="zagolovok"></h1>
+		<img src="" id="logo">
+	<span class="title">Имя:</span><span id="name" class="val"></span> <br>
+	<span class="title">Фамилия:</span><span id="surname" class="val"></span><br>
+	<span class="title">Оценки:</span><span id="scores" class="val"></span><br>
+	<span class="title">Средний балл:</span><span id="srscores" class="val"></span><br>
+
+<button  class ="btn" id="btn_next" onclick=" next()">следующий</button>
+<button class ="btn" id="btn_prev" onclick="prev()" disabled="">предыдущий</button>
+</div>
+
+
+</body>
+</html>
