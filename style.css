@@ -1,0 +1,21 @@
+#btn_prev{
+	border-color: red;
+}
+
+#btn_next{
+	border-color: green;
+}
+button {
+	background-color: black;
+	font-size: 40px;
+}
+span{
+	font-size: 60px;
+	font-style: italic;
+}
+body{
+	background-color: black;
+}
+*{
+	color: white;
+}
