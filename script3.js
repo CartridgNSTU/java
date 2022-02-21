@@ -1,13 +1,26 @@
-let students = [
-{id: 1, name: 'Андрей', surname: 'Артамонов'},
-{id: 2, name: 'Дарья', surname: 'Архипова'},
-{id: 3, name: 'Николай', surname: 'Баркалов'},
-{id: 4, name: 'Георгий', surname: 'Бочкарёв'},
-{id: 5, name: 'Матвей', surname: 'Гаврилов'}
-]
-
+let students = []
 let id_current = 0
 
+function load_from_site() {
+	//Создаём объект XMLHttpRequest
+	let xhr = new XMLHttpRequest();
+	//Настраиваем его: GET-запрос по ссылке http://217.71.129.139:4035/students.php
+	xhr.open('Get', 'http://217.71.129.139:4035/students.php');
+	//отсылаем запрос
+	xhr.send();
+	//далее код который сработает при ответе сервера
+	xhr.onload = function(){
+		if (xhr.status != 200) { //анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+			alert('Ошибка ${xhr.status}: ${xhr.statusText}');
+		}
+		else {//если всё без ошибок
+			students = JSON.parse(xhr.responseText)['response']
+		}
+	}
+	xhr.onerror = function() {
+		alert("Запрос не удался");
+	};
+}
 function load_all () {
 	let table = document.getElementById('tbl_all')
 	for (let i = 0; i< students.length; i++) {
