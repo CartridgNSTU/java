@@ -6,7 +6,7 @@
 	border-color: green;
 }
 button {
-	background-color: black;
+	background-color: grey;
 	font-size: 40px;
 }
 span{
@@ -14,8 +14,13 @@ span{
 	font-style: italic;
 }
 body{
-	background-color: black;
+	background-color: grey;
 }
 *{
 	color: white;
+}
+#logo{
+	width: 500px;
+	height: 500px;
+	text-align: center;
 }
