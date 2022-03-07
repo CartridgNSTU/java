@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>paint</title>
+		<script src="js/color.js"></script>
+	</head>
+<body> 
+  <canvas id="canvas" width="500" height="100"></canvas>
+  <canvas id="canvas2" width="300" height="300"></canvas>
+  <canvas id="canvasmo" ></canvas>
+  <canvas id="canvason" ></canvas>
+  <script> 
+
+    var canvas = document.getElementById('canvas') 
+    var ctx = canvas.getContext('2d')
+    var obCanvas = canvas.getContext('2d');
+
+
+	obCanvas.beginPath();
+	obCanvas.arc(140, 72, 72, 0, 2*Math.PI, false);
+	obCanvas.fillStyle = 'red';
+	obCanvas.fill();
+	obCanvas.lineWidth = 1;
+	obCanvas.strokeStyle = 'red';
+	obCanvas.stroke();
+
+	obCanvas.beginPath();
+	obCanvas.arc(278, 30, 54, 0, 2*Math.PI, false);
+	obCanvas.fillStyle = 'red';
+	obCanvas.fill();
+	obCanvas.lineWidth = 1;
+	obCanvas.strokeStyle = 'red';
+	obCanvas.stroke();
+
+
+    ctx.fillStyle = 'black';
+	ctx.beginPath();
+	ctx.moveTo(300,300);
+	ctx.bezierCurveTo(160,-30,300,30,50,90);
+	ctx.lineTo(300,90);
+	ctx.lineTo(0,90);
+	ctx.closePath();
+	ctx.fill();
+	ctx.lineWidth = 4;
+	ctx.strokeStyle = 'white';
+	ctx.stroke();
+
+	var canvas2 = document.getElementById('canvas2') 
+    var c = canvas2.getContext('2d')
+    c.moveTo(0,150)
+    c.lineTo(120,120)
+    c.lineTo(150,0)
+    c.lineTo(180,120)
+    c.lineTo(300,150)
+    c.lineTo(180,180)
+    c.lineTo(150,300)
+    c.lineTo(120,180)
+    c.lineTo(0,150)
+    c.fill()
+    c.stroke();
+    canvas2.style.display="none";
+
+    var img = document.getElementById("canvas2");
+    ctx.drawImage(img,
+    0,0,300,300,
+    250,0,60,60)
+    var img = document.getElementById("canvas2");
+    ctx.drawImage(img,
+    0,0,300,300,
+    125,0,30,30)
+    var img = document.getElementById("canvas2");
+    ctx.drawImage(img,
+    0,0,300,300,
+    150,20,30,30)
+    var img = document.getElementById("canvas2");
+    ctx.drawImage(img,
+    0,0,300,300,
+    225,10,30,30)
+    var img = document.getElementById("canvas2");
+    ctx.drawImage(img,
+    0,0,300,300,
+    300,0,30,30)
+    var img = document.getElementById("canvas2");
+    ctx.drawImage(img,
+    0,0,300,300,
+    275,50,30,30)
+  </script>
+</body>
+</html>
